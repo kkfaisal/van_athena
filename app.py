@@ -4,7 +4,7 @@ from vanna.remote import VannaDefault
 from openai import OpenAI
 import os
 from vanna.flask import VannaFlaskApp
-from smpl_auth import SimplePassword
+from auth_ui import SimplePassword
 from athena_utils import run_athena_query,validate_athena_query
 import pandas as pd
 
