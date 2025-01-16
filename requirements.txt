@@ -1,0 +1,7 @@
+torch
+sentence-transformers
+langchain-huggingface
+vanna[openai,postgres,pgvector]
+psycopg2-binary
+flask
+boto3
