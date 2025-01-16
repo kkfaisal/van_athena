@@ -30,4 +30,11 @@ services:
 ## How to run
 
 - For first time run use `docker-compose up --build` which build the Dockerfile
-- Once everything is up 
+- Once containers are up, change athena db and tabl names in `train.py`, add any docs in `train_doc1.txt` and then run train.py
+To run it enter to the docker container
+```
+docker exec -it vannaai-vanna-app-1 bash
+python train_vanna.py
+```
+- Once training is done data is feeded to vector store, then restart the app service `docker-compose restart vanna-app`
+- Now the UI is available in `localhost:5000`
