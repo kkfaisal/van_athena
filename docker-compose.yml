@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  vanna-app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - AWS_DEFAULT_REGION=me-south-1
+    volumes:
+      - .:/app
+      - ~/.aws:/root/.aws:ro 
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - postgres-vector
+
+  postgres-vector:
+    image: ankane/pgvector   # Try different image
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: ["postgres"]    # Simplified command
