@@ -43,8 +43,8 @@ SELECT
 'AwsDataCatalog' as database, table_schema, table_name, column_name, data_type 
 FROM 
 information_schema.columns 
-WHERE table_schema = 'cafu_transformed' AND 
-table_name = 'b2c_order_operational' 
+WHERE table_schema = '<athena_dbs>' AND 
+table_name = '<athena_table>' 
 ORDER BY ordinal_position ASC;
     """
 df_information_schema = vn.run_sql(inf_schema_query)
