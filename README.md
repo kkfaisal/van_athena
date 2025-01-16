@@ -38,3 +38,5 @@ python train_vanna.py
 ```
 - Once training is done data is feeded to vector store, then restart the app service `docker-compose restart vanna-app`
 - Now the UI is available in `localhost:5000`
+
+  https://www.awesomescreenshot.com/video/35579541?key=45b42367030bd3235ae59e5b216d7de7
