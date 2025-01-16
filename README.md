@@ -39,4 +39,19 @@ python train_vanna.py
 - Once training is done data is feeded to vector store, then restart the app service `docker-compose restart vanna-app`
 - Now the UI is available in `localhost:5000`
 
-  https://www.awesomescreenshot.com/video/35579541?key=45b42367030bd3235ae59e5b216d7de7
+## Screenshots
+## Asking Questions
+![alt text](https://github.com/kkfaisal/van_athena/blob/main/img/git_img_1.png)
+
+## Add SQL pair to vector store 
+![alt text](https://github.com/kkfaisal/van_athena/blob/main/img/git_img_2.png)
+
+## Redraw Chart
+![alt text](https://github.com/kkfaisal/van_athena/blob/main/img/git_img_3.png)
+
+## Training Data
+![alt text](https://github.com/kkfaisal/van_athena/blob/main/img/git_img_4.png)
+
+## Deelete Training Data
+![alt text](https://github.com/kkfaisal/van_athena/blob/main/img/git_img_5.png)
+
