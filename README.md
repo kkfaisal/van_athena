@@ -28,7 +28,11 @@ services:
 ```
 - If you want to change pg vector db/user details change in `init.sql`
 ## How to run
-
+- change `athena_utils` to update aws profile, and s3 bucket names
+- change `init.sql` to set up username and password for postgres vector db.
+- Update vector db connecytion strings in `train.py` and `app.py` accordingly
+- in `train_doc_1.txt` add documentions you have about your tables
+- in `train.py` change the SQL statement to extract coulm details of table as you needed - add more tables or cols
 - For first time run use `docker-compose up --build` which build the Dockerfile
 - Once containers are up, change athena db and tabl names in `train.py`, add any docs in `train_doc1.txt` and then run train.py
 To run it enter to the docker container
