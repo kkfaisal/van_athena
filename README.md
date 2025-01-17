@@ -57,5 +57,6 @@ python train_vanna.py
 ![alt text](https://github.com/kkfaisal/van_athena/blob/main/img/git_img_4.png)
 
 ## Deelete Training Data
+You can delete each entry one by one. If you want to delete in bulk got to Postgres vector DB and delete entries using SQL
 ![alt text](https://github.com/kkfaisal/van_athena/blob/main/img/git_img_5.png)
 
