@@ -27,4 +27,4 @@ EXPOSE 5000
 ENV PYTHONUNBUFFERED=1
 
 # Run the application
-CMD ["python", "docker_test_app.py"]
+CMD ["python", "app.py"]
