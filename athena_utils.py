@@ -1,7 +1,7 @@
 import time
 import boto3
 import pandas as pd
-boto3.setup_default_session(profile_name='cafu-de-admin')
+boto3.setup_default_session(profile_name='<your aws profile name>')
 athena_cl = boto3.client('athena', region_name='us-east-1')
 
 def execute_athen_query(query, res_return=True, ath_workgroup='primary'):
@@ -9,7 +9,7 @@ def execute_athen_query(query, res_return=True, ath_workgroup='primary'):
     print(f"Running query {query}")
 
     db = 'cafu_transformed'
-    s3_outpt = 's3://cafudataengprod-athena/query_results/users/faisal/'
+    s3_outpt = 's3://<athena_output_s3_bucket>/query_results/users/Yourname_maybe/'
     print(f"Running query {query}")
     response = client.start_query_execution(
         QueryString=query,
