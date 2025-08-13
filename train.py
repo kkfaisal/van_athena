@@ -4,7 +4,7 @@ from vanna.remote import VannaDefault
 from openai import OpenAI
 import os
 from vanna.flask import VannaFlaskApp
-from smpl_auth import SimplePassword
+from auth_ui import SimplePassword
 from athena_utils import run_athena_query,validate_athena_query
 
 openai_api_key = os.environ['OPENAI_API_KEY']
@@ -57,7 +57,7 @@ vn.train(plan=plan)
 
 # # train on docs
  #read line of /train_doc_1.txt
-with open('/Users/faisalfalah/Desktop/CAFU/code/cafu-de-redshift-utils/vanna.ai/train_doc_1.txt', 'r') as file:
+with open('/app/train_doc_1.txt', 'r') as file:
     lines = file.readlines()
     for line in lines:
         vn.train(documentation=line)
